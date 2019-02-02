@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExoPlayerMusica">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:controller_layout_id="@layout/playback_control"
+        app:show_timeout="10000"
+        app:fastforward_increment="20000"
+        app:rewind_increment="20000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imagenExoPlayer"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/nombreCancionExo"
+                android:layout_width="300dp"
+                android:layout_below="@+id/imagenExoPlayer"
+                android:layout_marginTop="16dp"
+                android:textSize="24sp"
+                android:textColor="@color/colorAccent"
+                style="@style/textoExoPlayerCanciones"/>
+
+            <TextView
+                android:id="@+id/nombreAutoresExo"
+                android:layout_width="250dp"
+                android:layout_below="@+id/nombreCancionExo"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                style="@style/textoExoPlayerCanciones"/>
+
+        </RelativeLayout>
+
+
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+</RelativeLayout>
